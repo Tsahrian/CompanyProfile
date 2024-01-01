@@ -80,7 +80,6 @@
                     @else
                         <li class=" nav-item">
                             <a href="/login" class=" nav-link"><i class="bi bi-box-arrow-in-right"></i>Login</a>
-                            <a href="/dashboard" class=" nav-link"><i class="bi bi-box-arrow-in-right"></i>Login 2</a>
                         </li>
                     @endauth
                 </ul>

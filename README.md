@@ -2,6 +2,8 @@
 
 Company Profile Admin CMS
 
+file database : company_profile.sql
+
 fiture :
 
 Front-end (Landing Page)

@@ -44,14 +44,14 @@
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#beranda">{{ trans('message.home') }}</a></li>
-                    <li class="nav-item"><a class="blog nav-link" href="#blog">{{ trans('message.blog') }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">{{ trans('message.home') }}</a></li>
+                    <li class="nav-item"><a class="blog nav-link" href="#about">{{ trans('message.blog') }}</a></li>
                     <li class="nav-item"><a class="galeri nav-link" href="#galeri">{{ trans('message.galeri') }}</a>
                     </li>
                     <li class="nav-item"><a class="visimisi nav-link"
                             href="#visimisi">{{ trans('message.visimisi') }}</a></li>
                     <li class="nav-item"><a class="mitra nav-link" href="#mitra">{{ trans('message.mitra') }}</a></li>
-                    <li class="nav-item"><a class="kontak nav-link" href="#kontak">{{ trans('message.kontak') }}</a>
+                    <li class="nav-item"><a class="kontak nav-link" href="#contact">{{ trans('message.kontak') }}</a>
                     </li>
                 </ul>
 
@@ -158,6 +158,7 @@
             </div>
         </div>
     </section>
+
     <!-- galeri Grid-->
     <section class="page-section bg-light" id="galeri">
         <div class="container">
@@ -191,33 +192,6 @@
     </section>
 
     <!-- Embed youtube galerry start -->
-    <section class="page-section">
-        <h3 class="videogaleri text-center">Video Galeri</h3>
-        <div class="container container-video">
-            <div class="main-video">
-                <iframe class="" width="560" height="315"
-                    src="https://www.youtube.com/embed/eVLRYDl8StA?si=HRwbr5FNDaaM0xqx" title="YouTube video player"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="video-list">
-                @foreach ($youtubes as $vid)
-                    <div class="vid active">
-                        <iframe class="" width="100" height="100" src="{{ $vid->link }}"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                        <h5 class="rmhclusterpremium title">{{ $vid->title_video }}</h5>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!-- Embed youtube galerry end -->
-
-
-    <!-- Embed youtube galerry start -->
     <h3 class="videogaleri text-center">Video Galeri</h3>
     <div class="container container-video">
         <div class="main-video">
@@ -248,7 +222,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">About</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted">Projects undertaken.</h3>
             </div>
             <ul class="timeline">
                 @foreach ($blog as $news)
@@ -282,8 +256,9 @@
             </ul>
         </div>
     </section>
-    <!-- Team-->
-    <section class="page-section bg-light">
+
+    <!-- Visi dan Misi-->
+    <section class="page-section bg-light" id="visimisi">
         <div id="visi-misi" class="container-fluid py-5">
             <div class="container">
                 <div class="row">
@@ -304,7 +279,7 @@
     </section>
 
     <!-- Partners-->
-    <div class="py-5">
+    <div class="py-5" id="mitra">
         <div class="container">
             <h1 class="mitra1 text-center $grey-500">Mitra</h1>
             <div class="row align-items-center">

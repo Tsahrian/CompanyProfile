@@ -104,10 +104,11 @@ class BlogController extends Controller
         if(empty($request->file('image_blog'))){
             $blog = blog::find($id);
             $blog->update([
+                'tanggal'     => $request->tanggal,
                 'title'       => $request->title,
                 'title_en'    => $request->title_en,
                 'body'        => str::limit(strip_tags($request->body), 200),
-                'body_en'        => str::limit(strip_tags($request->body_en), 200),
+                'body_en'     => str::limit(strip_tags($request->body_en), 200),
                 'slug'        => str::slug($request->title),
                 'category_id' => $request->category_id,
                 'is_active'   => $request->is_active,
@@ -118,10 +119,11 @@ class BlogController extends Controller
             $blog = blog::find($id);
             storage::delete($blog->image_blog);
             $blog->update([
+                'tanggal'     => $request->tanggal,
                 'title'       => $request->title,
                 'title_en'    => $request->title_en,
                 'body'        => $request->body,
-                'body_en'        => $request->body_en,
+                'body_en'     => $request->body_en,
                 'slug'        => str::slug($request->title),
                 'category_id' => $request->category_id,
                 'is_active'   => $request->is_active,

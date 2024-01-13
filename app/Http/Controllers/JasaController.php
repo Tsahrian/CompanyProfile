@@ -51,8 +51,8 @@ class JasaController extends Controller
         $data = $request->all();
             $data['slug'] = str::slug($request->title_jasa);
             $data['user_id'] = Auth::id();
-            $data['body_jasa'] = str::limit(strip_tags($request->body_jasa), 200);
-            $data['body_jasa_en'] = str::limit(strip_tags($request->body_jasa_en), 200);
+            $data['body_jasa'] = str::limit(strip_tags($request->body_jasa), 300);
+            $data['body_jasa_en'] = str::limit(strip_tags($request->body_jasa_en), 255);
             $data['categori_id'] = 0;
 
         Jasa::create($data);
@@ -96,8 +96,8 @@ class JasaController extends Controller
     {
         $data = $request->all();
             $data['slug'] = Str::slug($request->title_jasa);
-            $data['body_jasa'] = str::limit(strip_tags($request->body_jasa), 200);
-            $data['body_jasa_en'] = str::limit(strip_tags($request->body_jasa_en), 200);
+            $data['body_jasa'] = str::limit(strip_tags($request->body_jasa), 300);
+            $data['body_jasa_en'] = str::limit(strip_tags($request->body_jasa_en), 255);
 
             $jasas = Jasa::findOrFail($id);
             $jasas->update($data);

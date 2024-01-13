@@ -116,8 +116,8 @@
                         <img src="{{ asset('storage/' . $row->images_slider) }}"
                             class="d-block w-100 h-100 img-thumbnail" alt="rumah-1" />
                         <div class="carousel-text carousel-caption d-md-block">
-                            <h5 class="IRM">{{ $row->title_slider }}</h5>
-                            <p class="IRM1">{{ $row->body }}</p>
+                            <h5>{{ $row->title_slider }}</h5>
+                            <p>{{ $row->body }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -141,7 +141,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="jasa section-heading text-uppercase">Jasa</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted">The services we provide</h3>
             </div>
             <div class="row text-center">
                 @foreach ($jasas as $jasa)
@@ -151,8 +151,7 @@
                             <i class="fas fa-house-circle-check fa-beat fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="properti my-3">{{ $jasa->title_jasa }}</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime
-                            quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <p class="text-muted">{{ $jasa->body_jasa }}</p>
                     </div>
                 @endforeach
             </div>
@@ -164,7 +163,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="galerihead section-heading text-uppercase">Galeri</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted">Portfolio.</h3>
             </div>
             <div class="row">
                 @foreach ($photo_gallery as $gallery)
@@ -192,29 +191,29 @@
     </section>
 
     <!-- Embed youtube galerry start -->
-    <h3 class="videogaleri text-center">Video Galeri</h3>
-    <div class="container container-video">
-        <div class="main-video">
-            <iframe class="" width="560" height="315"
-                src="https://www.youtube.com/embed/eVLRYDl8StA?si=oe6XPdEEmKG7rySF" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <h3 class="clusterpremium">Rumah mewah di cluster premium</h3>
+    <section class="page-section">
+        <h3 class="videogaleri text-center">Video Galeri</h3>
+        <div class="container container-video">
+            <div class="main-video">
+                <iframe class="" width="560" height="315"
+                    src="https://www.youtube.com/embed/eVLRYDl8StA?si=HRwbr5FNDaaM0xqx" title="YouTube video player"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="video-list">
+                @foreach ($youtubes as $vid)
+                    <div class="vid active">
+                        <iframe class="" width="100" height="100" src="{{ $vid->link }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <h5 class="rmhclusterpremium title">{{ $vid->title_video }}</h5>
+                    </div>
+                @endforeach
+            </div>
         </div>
-        <div class="video-list">
-            <h3>Playlist</h3>
-            @foreach ($youtubes as $vid)
-                <div class="vid">
-                    <iframe class="" width="100" height="100" src="{{ $vid->link }}"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <h5 class="rmhclusterpremium title">{{ $vid->title_video }}</h5>
-                </div>
-            @endforeach
-        </div>
-    </div>
+    </section>
     <!-- Embed youtube galerry end -->
 
     <!-- About-->
@@ -390,7 +389,6 @@
                                 <div class="modal-body">
                                     <!-- Galeri details-->
                                     <h2 class="nameproyek text-uppercase">{{ $gallery->title_photo }}</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto"
                                         src="{{ asset('storage/' . $gallery->image_gallery) }}" alt="..." />
                                     <p>{{ $gallery->body }}</p>

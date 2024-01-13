@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 31, 2023 at 11:20 AM
+-- Generation Time: Jan 13, 2024 at 03:24 PM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -49,9 +49,9 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `tanggal`, `title`, `title_en`, `slug`, `body`, `body_en`, `category_id`, `user_id`, `image_blog`, `is_active`, `views`, `created_at`, `updated_at`) VALUES
-(3, '2023-12-13', 'Proyek Tanggerang Selatan', 'South Tangerang Project', 'proyek-tanggerang-selatan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 5, 1, 'blog/1omcPVRjFIwFiVsA35M8DZQrsI1yKDoYqs3hKfDV.jpg', 1, 0, '2023-12-25 09:37:24', '2023-12-30 23:21:38'),
-(4, '2023-12-13', 'Proyek Rumah Susun', 'Flats Project', 'proyek-rumah-susun', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 5, 1, 'blog/XELpNHyZjEBimUETqAvy3WjEgwu3V7HNtDPtXWOs.jpg', 1, 0, '2023-12-25 10:30:36', '2023-12-30 23:24:29'),
-(7, '2023-12-07', 'Proyek Perumahan di Cilejit', 'Housing Project in Cilejit', 'proyek-perumahan-di-cilejit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudanti...', 5, 1, 'blog/rRYCC6sw6Jc6fnPbCLhcnj7WifPAoS8N47GNsrkv.jpg', 1, 0, '2023-12-25 20:37:30', '2023-12-30 23:24:57');
+(3, '2021-06-13', 'Proyek Tanggerang Selatan', 'South Tangerang Project', 'proyek-tanggerang-selatan', '2 klaster hunian di CitraGarden Bintaro yakni Alstonia dan Bischofia. Hunian tersebut dibangun di atas lahan yang berukuran 60 meter persegi hingga 120 meter persegi dengan ukuran bangunan dari 37 met...', '2 residential clusters in CitraGarden Bintaro, namely Alstonia and Bischofia. The residence is built on land measuring 60 square meters to 120 square meters with building sizes from 37 square meters t...', 5, 1, 'blog/1omcPVRjFIwFiVsA35M8DZQrsI1yKDoYqs3hKfDV.jpg', 1, 0, '2023-12-25 09:37:24', '2024-01-13 00:01:24'),
+(4, '2022-11-13', 'Proyek Rumah Susun', 'Flats Project', 'proyek-rumah-susun', 'Proyek Kerjasama Pemerintah dengan Badan Usaha (KPBU) Rusun Cisaranten Bina Harapan Kota Bandung. Proyek ini merupakan pilot project arahan dari Presiden Jokowi pada sektor perumahan untuk pencapaian....', 'Government Collaboration Project with Business Entities (KPBU) Cisaranten Bina Harapan Flats, Bandung City. This project is a pilot project directed by President Jokowi in the housing sector to achiev...', 5, 1, 'blog/XELpNHyZjEBimUETqAvy3WjEgwu3V7HNtDPtXWOs.jpg', 1, 0, '2023-12-25 10:30:36', '2024-01-13 00:02:04'),
+(7, '2023-12-07', 'Proyek Perumahan di Cilejit', 'Housing Project in Cilejit', 'proyek-perumahan-di-cilejit', 'perumahan yang dikembangkan oleh developer properti ternama Tanah Air, yaitu PT Modernland Tbk dengan konsep minimalis modern', 'housing developed by a well-known property developer in Indonesia, namely PT Modernland Tbk, with a modern minimalist concept', 5, 1, 'blog/rRYCC6sw6Jc6fnPbCLhcnj7WifPAoS8N47GNsrkv.jpg', 1, 0, '2023-12-25 20:37:30', '2024-01-12 23:55:55');
 
 -- --------------------------------------------------------
 
@@ -378,7 +378,7 @@ CREATE TABLE `profiles` (
 --
 
 INSERT INTO `profiles` (`id`, `phone`, `address`, `email`, `category_id`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, '022-112233', 'jl.lorem ipsum si amet denim', 'rumahsolusi@gmail.com', 8, 1, '2023-12-28 08:25:40', '2023-12-28 10:37:02');
+(1, '021-22377796', 'Kompleks Sinar Kasih, No 120B Jakarta Barat', 'rumahsolusi@gmail.com', 8, 1, '2023-12-28 08:25:40', '2023-12-28 10:37:02');
 
 -- --------------------------------------------------------
 
@@ -644,7 +644,7 @@ ALTER TABLE `youtubes`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -668,7 +668,7 @@ ALTER TABLE `image_slider`
 -- AUTO_INCREMENT for table `jasas`
 --
 ALTER TABLE `jasas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -698,7 +698,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `photo_gallery`
 --
 ALTER TABLE `photo_gallery`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -722,7 +722,7 @@ ALTER TABLE `sosmeds`
 -- AUTO_INCREMENT for table `text_intros`
 --
 ALTER TABLE `text_intros`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -734,13 +734,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `visi_misis`
 --
 ALTER TABLE `visi_misis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `youtubes`
 --
 ALTER TABLE `youtubes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

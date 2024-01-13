@@ -50,7 +50,7 @@ class PostController extends Controller
         foreach($jasas as $val) {
             if ($locale == 'en') {
                 $val->title_jasa = $val->title_jasa_en;
-                $val->body = $val->body_en;
+                $val->body_jasa = $val->body_jasa_en;
             }
         }
         $photo_gallery = PhotoGallery::all();
